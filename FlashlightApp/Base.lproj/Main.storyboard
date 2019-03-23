@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlashlightApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BU2-dF-tHu">
+                                <rect key="frame" x="170" y="463" width="75" height="51"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="HelloWorld">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="flashLightButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAD-A1-Tkv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-yw-KT2">
+                                <rect key="frame" x="184" y="178" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.36272077075669207" blue="0.24787080316084409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="redButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZS-YW-36h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2L-iZ-4Cm">
+                                <rect key="frame" x="173" y="633" width="72" height="66"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.47448305299999999" green="1" blue="0.27748469129999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="greenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AvW-Px-3m5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VNf-yw-KT2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-261" id="40S-C7-dmF"/>
+                            <constraint firstItem="BU2-dF-tHu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="56P-s8-fux"/>
+                            <constraint firstItem="VNf-yw-KT2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SSe-Qb-5RH"/>
+                            <constraint firstItem="o2L-iZ-4Cm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="202" id="WdH-IK-Uab"/>
+                            <constraint firstItem="o2L-iZ-4Cm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehw-Si-0w6"/>
+                            <constraint firstItem="BU2-dF-tHu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ht9-eg-ZIO"/>
+                            <constraint firstItem="BU2-dF-tHu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jH7-vK-GuH"/>
+                            <constraint firstItem="BU2-dF-tHu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vhB-lJ-ew0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="greenButton" destination="o2L-iZ-4Cm" id="BGG-if-an8"/>
+                        <outlet property="helloWorldButton" destination="BU2-dF-tHu" id="y56-9t-sNO"/>
+                        <outlet property="redButton" destination="VNf-yw-KT2" id="1yS-Np-9Aa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-78.260869565217391" y="133.92857142857142"/>
         </scene>
     </scenes>
 </document>
